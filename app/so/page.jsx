@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import PagePadding from '@/components/pagePadding.jsx'
+
 
 function page (){
   return (
