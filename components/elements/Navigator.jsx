@@ -12,47 +12,28 @@ function Navigator() {
         return [
             { 
                 icon: "", 
-                label: "우리의 마음", 
-                isActive: pathname === "/mind", 
-                href: "/mind" 
+                label: "소개", 
+                isActive: pathname === "/so", 
+                href: "/so" 
             },
             { 
                 icon: "", 
-                label: "우리의 가치", 
-                isActive: pathname === "/value", 
-                href: "/value" 
+                label: "대표 상품 소개", 
+                isActive: pathname === "/dae", 
+                href: "/dae" 
             },
             { 
                 icon: "", 
-                label: "우리의 진료", 
-                isActive: pathname === "/treatment", 
-                href: "/treatment" 
-            },
-            { 
-                icon: "", 
-                label: "우리의 시설", 
-                isActive: pathname === "/facility", 
-                href: "/facility" 
-            },
-            { 
-                icon: "", 
-                label: "입퇴원안내", 
-                isActive: pathname === "/info", 
-                href: "/info" 
+                label: "내부시설", 
+                isActive: pathname === "/si", 
+                href: "/si" 
             },
             { 
                 icon: "", 
                 label: "오시는 길", 
                 isActive: pathname === "/map", 
                 href: "/map" 
-            },
-
-            { 
-                icon: "", 
-                label: "중앙소식", 
-                isActive: pathname === "/blog", 
-                href: "/blog" 
-            },
+            }
         ]
     },[pathname])
   return (

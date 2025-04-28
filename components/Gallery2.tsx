@@ -23,22 +23,15 @@ const Gallery2 = ({ images }: GalleryProps) => {
 
   const mainImage = useMemo(
     () =>
-        images.map((image, index) => (
-        <YouTube key={index}
-                videoId={image}
-    
-                opts={{
-                  width: "640",
-                  height: "362",
-                  playerVars: {
-                    autoplay: 0, //자동재생 O
-                    rel: 0, //관련 동영상 표시하지 않음 (근데 별로 쓸모 없는듯..)
-                    modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
-                  },
-                }}
-              
-                onEnd={(e:any)=>{e.target.stopVideo(0);}}      
-              />
+      images.map((image, index) => (
+        <CarouselItem key={index} className="relative aspect-video w-full h-[353px]">
+          <Image
+            src={image}
+            alt={`Carousel Main Image ${index + 1}`}
+            fill
+            className='object-cover ml-4'
+          />
+        </CarouselItem>
       )),
     [images],
   );
@@ -70,23 +63,39 @@ const Gallery2 = ({ images }: GalleryProps) => {
     };
   }, [mainApi, thumbnailApi]);
 
-  const handleClick = (index: number) => {
-    if (!mainApi || !thumbnailApi) {
-      return;
-    }
-    thumbnailApi.scrollTo(index);
-    mainApi.scrollTo(index);
-    setCurrent(index);
-  };
 
   return (
-    <div className="w-full sm:w-auto">
-      <Carousel className="flex justify-center items-center" setApi={setMainApi}>
-        <CarouselContent className="w-[640px]">{mainImage}</CarouselContent>
-        <CarouselPrevious className="left-20"/>
-        <CarouselNext className="right-20" />
-      </Carousel>
-    </div>
+    <div className="w-full">
+    <Carousel>
+      <div className="flex flex-row justify-between items-end my-2">
+      <article className="flex flex-row gap-3">
+   
+            <div className="flex flex-col justify-center">
+              <div>
+               
+              </div>
+              <div className="text-[34px] font-bold leading-[34px] ">
+               
+              </div>
+            </div>
+          </article>
+        <div className="relative left-[-45px]">
+          <div className="absolute bottom-[45px]">
+            <CarouselPrevious className="right-2" />
+            <CarouselNext className=" left-1" />
+          </div>
+        </div>
+      </div>
+      <CarouselContent className="w-full">{mainImage}</CarouselContent>
+    </Carousel>
+  </div>
+    // <div className="w-full sm:w-auto">
+    //   <Carousel className="flex justify-center items-center" setApi={setMainApi}>
+    //     <CarouselContent className="w-[640px]">{mainImage}</CarouselContent>
+    //     <CarouselPrevious className="left-5"/>
+    //     <CarouselNext className="right-5" />
+    //   </Carousel>
+    // </div>
   );
 };
 

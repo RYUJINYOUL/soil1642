@@ -4,11 +4,11 @@ import Image from "next/image";
 
 function page (){
   return (
-    <div className='my-10 pl-3.5'>
+    <div className='lg:my-10 p-3.5'>
       <section className='flex flex-col justify-center items-center'>
-      <div className='mt-13' />
+      <div className='lg:mt-13' />
         <div className='flex flex-col'>
-          <div className='lg:text-start md:text-center sm:text-center text-[20px] w-[1100px]'>내부시설</div>
+          <div className='lg:text-start text-center text-[20px] w-[1100px]'>내부시설</div>
           <hr className="my-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50"/>
         </div>
         <div className='mt-5' />

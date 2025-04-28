@@ -28,6 +28,9 @@ export default function Map() {
                center: position,
                zoom: 17,
                mapTypeId: 'hybrid',
+               streetViewControl:false,
+               fullscreenControl:false,
+               gestureHandling:'cooperative',
                mapId: "MY_NEXTJS_MAPID"
            }
 
@@ -44,6 +47,6 @@ export default function Map() {
     }, [])
 
     return (
-       <div style={{ height: '600px'}} ref={mapRef} />
+       <div style={{ height: '100%'}} ref={mapRef} />
     )
 }
