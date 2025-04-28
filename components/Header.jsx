@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import Logo from './elements/Logo'
 import Menu from '@/components/Menu'
 import Navigator from './elements/Navigator'
-import PagePadding from '@/components/pagePadding'
+import PagePadding from './PagePadding'
 
 import {
   Drawer,
