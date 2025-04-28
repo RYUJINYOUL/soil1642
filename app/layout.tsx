@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/themeProvider";
-import FloatingMenu from "@/components/ui/FloatingMenu"
+import Footer from "@/components/Footer"
 import FabButton from '@/components/ui/FabButton';
 
 
@@ -31,6 +31,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
             <FabButton />
+            <Footer />
           </body>
     </html>
   );

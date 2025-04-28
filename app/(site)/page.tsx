@@ -5,6 +5,7 @@ import Image from "next/image";
 import Map from "@/components/map"
 import { useRouter } from 'next/navigation'
 import Gallery2 from '@/components/Gallery2'
+import Footer from "@/components/Footer"
 
 
 
@@ -302,7 +303,7 @@ const Page = () => {
                </div>
    
       <div className='mt-9 h-[500px] bg-[#ededed]'></div>
-    
+      <Footer />
    </div>
   
   )
