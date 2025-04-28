@@ -5,6 +5,7 @@ const page = () => {
     <div>
       blog
     </div>
+    
   )
 }
 

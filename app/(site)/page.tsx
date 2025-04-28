@@ -5,7 +5,7 @@ import Image from "next/image";
 import Map from "@/components/map"
 import { useRouter } from 'next/navigation'
 import Gallery2 from '@/components/Gallery2'
-import Footer from "@/components/Footer"
+import Footer from '@/components/Footer'
 
 
 
@@ -36,7 +36,7 @@ const Page = () => {
 
   return (
     
-    <div className='min-h-[600px]'>
+    <div>
   
       <section className='md:hidden block'>
           <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
@@ -297,13 +297,9 @@ const Page = () => {
         
                    <div className='mt-7' />
             
-              
-            
                <div className='h-[150px]'/>
                </div>
-   
-      <div className='mt-9 h-[500px] bg-[#ededed]'></div>
-      <Footer />
+               <Footer />
    </div>
   
   )

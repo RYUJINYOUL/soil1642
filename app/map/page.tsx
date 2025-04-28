@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Map from "@/components/map"
-
+import Footer from '@/components/Footer'
 
 function page() {
      
@@ -31,6 +31,7 @@ function page() {
       
     
        <div className='h-[150px]'/>
+       <Footer />
        </div>
    
   );

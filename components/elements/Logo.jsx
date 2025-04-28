@@ -9,7 +9,7 @@ function Logo(props) {
     let total = props
     const onClickLogo = () =>{
 
-        push("/");
+        push("/", {scroll: false});
     }
 
 

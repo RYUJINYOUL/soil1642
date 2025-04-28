@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-
+import Footer from '@/components/Footer'
 
 function page (){
   return (
@@ -65,6 +65,7 @@ function page (){
        </section>
 
        <div className='h-[150px]'/>
+       <Footer />
        </div>
   )
 }
