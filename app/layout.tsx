@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/themeProvider";
 import FloatingMenu from "@/components/ui/FloatingMenu"
+import FabButton from '@/components/ui/FabButton';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +30,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-            <FloatingMenu />
+            <FabButton />
           </body>
     </html>
   );
