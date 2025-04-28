@@ -60,14 +60,16 @@ const Page = () => {
       
        <div className='md:mt-7' />
        <div className='md:w-[1100px] w-full md:px-0 px-3 flex md:flex-row flex-col justify-start items-start gap-10'>
-        
+        <div className='relative md:w-[530px] w-full h-[353px]'>
        <Image
           alt="mediaItem"
-          className="object-contain"
-          width={530}
-          height={353}
+          className="object-cover"
+          // width={530}
+          // height={353}
+          fill
           src={"/Image/mosaz29qx6.jpeg"}
         />  
+        </div>
         <div className='flex flex-col md:w-[530px] w-full'>
           <div className='md:text-[20px] text-[18px] text-start'>흙광고기획</div>
           <div className='md:mt-10 mt-3' />
@@ -102,7 +104,7 @@ const Page = () => {
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-700 opacity-100 w-[120px] dark:opacity-50"/>
        </div>
        <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/dae")}}>더보기 &nbsp;&gt;</div>
           <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[980px]"/>
        </div>
        </div>
@@ -158,7 +160,7 @@ const Page = () => {
           <div className='md:hidden block flex flex-col h-[40px] justify-end'>
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
           <div className='md:mt-10 mt-3' />
-          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/dae")}}>더보기 &nbsp;&gt;</div>
           </div>
         </div>  
        </section>
@@ -181,8 +183,8 @@ const Page = () => {
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-700 opacity-100 w-[70px] dark:opacity-50"/>
        </div>
        <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
-          <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1130px]"/>
+          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/si")}}>더보기 &nbsp;&gt;</div>
+          <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1030px]"/>
        </div>
        </div>
        </div>
@@ -246,10 +248,20 @@ const Page = () => {
           height={350}
           src={"/Image/mosauoNYRF.jpeg"}
         />   
+        
         </div>
+        <div className='flex flex-col md:w-[530px] w-full'>
+          <div className='md:mt-10 mt-8' />
+          <div className='md:hidden block flex flex-col h-[40px] justify-end'>
+          <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
+          <div className='md:mt-10 mt-3' />
+          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/si")}}>더보기 &nbsp;&gt;</div>
+       </div>
+       </div>
         </section>
 
         <section className='md:hidden block'>
+        <div className='md:mb-18 mb-4'></div>
           <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
       </section>    
 
