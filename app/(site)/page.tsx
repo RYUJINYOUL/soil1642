@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
-import useWindowSizeCustom from "@/hooks/useWindowSizeCustom"
 import Image from "next/image";
 import Map from "@/components/map"
 import { useRouter } from 'next/navigation'
 import Gallery2 from '@/components/Gallery2'
 import Footer from '@/components/Footer'
+import Mapping from '@/components/Mapping';
 
 
 
@@ -251,7 +251,7 @@ const Page = () => {
         />   
         
         </div>
-        <div className='flex flex-col md:w-[530px] w-full'>
+        <div className='flex flex-col md:w-[530px] w-full px-3'>
           <div className='md:mt-10 mt-8' />
           <div className='md:hidden block flex flex-col h-[40px] justify-end'>
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
@@ -267,38 +267,7 @@ const Page = () => {
       </section>    
 
 
-         <div className='lg:my-10 p-3.5'>
-               <section className='flex flex-col justify-center items-center'>
-              <div className='lg:mt-13' />
-              <div className='flex flex-col'>
-              <div className='flex md:flex-row flex-col md:justify-between items-start lg:w-[1100px] w-screen'>
-                  <div className='lg:px-0 px-3 flex flex-col h-[40px] justify-end'>
-                  <div className='lg:text-start text-center text-[20px]'>오시는 길</div>
-                  <hr className="mt-1 h-0.5 border-t-0 bg-neutral-700 opacity-100 w-[75px] dark:opacity-50"/>
-              </div>
-                  <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-                  <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
-                  <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1025px]"/>
-              </div>
-              </div>
-              </div>
-                </section>
-                <div className='mt-5' />
-                
-                 
-                  <div className='mt-7'/>
-        
-                  <section className='flex justify-center items-center'>
-                  <div className='md:w-[1100px] md:h-[600px] w-[640px] h-[350px]'>
-                    <Map />
-                  </div>
-                  </section>
-        
-        
-                   <div className='mt-7' />
-            
-               <div className='h-[150px]'/>
-               </div>
+         <Mapping/>
                <Footer />
    </div>
   

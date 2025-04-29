@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-import YouTube from 'react-youtube';
+
 
 import {
   Carousel,
@@ -67,7 +67,7 @@ const Gallery2 = ({ images }: GalleryProps) => {
   return (
     <div className="w-full">
     <Carousel>
-      <div className="flex flex-row justify-between items-end my-2">
+      <div className="flex flex-row justify-between items-end">
       <article className="flex flex-row gap-3">
    
             <div className="flex flex-col justify-center">
