@@ -11,7 +11,7 @@ const Mapping = () => {
     <section className='flex flex-col justify-center items-center'>
     <div className='lg:mt-13' />
       <div className='flex flex-col'>
-        <div className='lg:text-start text-center text-[20px] w-[1100px]'>오시는 길</div>
+        <div className='lg:text-start text-center text-[20px] lg:w-[1100px] w-screen'>오시는 길</div>
         <hr className="my-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50"/>
       </div>
       </section>

@@ -39,7 +39,7 @@ const Page = () => {
     <div>
   
       <section className='md:hidden block'>
-          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
+          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
       </section>    
 
       <div className='md:mb-18 mb-4'></div>
@@ -91,7 +91,7 @@ const Page = () => {
 
       <section className='md:hidden block'>
        <div className='md:mb-18 mb-4'></div>
-       <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
+       <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
        </section>
 
        <div className='md:mb-18 mb-4'></div>
@@ -168,7 +168,7 @@ const Page = () => {
 
        <section className='md:hidden block'>
        <div className='md:mb-18 mb-1'></div>
-       <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
+       <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
  
        </section>
 
@@ -263,7 +263,7 @@ const Page = () => {
 
         <section className='md:hidden block'>
         <div className='md:mb-18 mb-4'></div>
-          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1000px]"/>
+          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
       </section>    
 
 

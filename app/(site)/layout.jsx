@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 
 const layout = ({ children }) => {
   return (
-    <div className="w-full h-full">
+    <div className="w-screen h-full">
     <Header>
       {children}
     </Header>

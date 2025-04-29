@@ -11,7 +11,7 @@ const FabButton = () => {
   };
  
   return (
-    <div className="fixed right-10 bottom-10 pb-4 flex flex-col gap-3">
+    <div className="fixed right-5 bottom-5 pb-4 flex flex-col gap-3">
       {/* <div className="gap-3"> */}
         {openSubMenu && (
           <ul>
