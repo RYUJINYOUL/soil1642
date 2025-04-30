@@ -16,6 +16,14 @@ function page() {
     <div>
        <Mapping />
        <div className='h-[80px]'/>
+       <div className="m-5 flex gap-4 overflow-x-auto pb-6 scrollbar-hide">
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+  <div className="w-56 flex-shrink-0 rounded bg-slate-300 p-2">Lorem ipsum dolorn</div>
+</div>
        <Footer />
        </div>
    

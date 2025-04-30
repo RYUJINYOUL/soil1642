@@ -67,15 +67,16 @@ const Header2 = ({children}) => {
        </div>
 
       <section className='flex items-center'>
-         <article className='hidden lg:block'>
+         {/* <article className='hidden lg:block'> */}
+         <article>
           <Menu total={true} />
           </article>
      
-           <HeaderDrawer>
+           {/* <HeaderDrawer>
             <article className='lg:hidden sm:pr-10'>
            <GiHamburgerMenu className={"text-black"} size={30} />
              </article>
-             </HeaderDrawer>
+             </HeaderDrawer> */}
             </section>
 
    </div>    
