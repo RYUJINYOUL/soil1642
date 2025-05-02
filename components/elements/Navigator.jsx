@@ -61,7 +61,7 @@ function Navigator() {
                  onClick={() => onClickCategory(item)}
                  key={item.label}
                  className={cn(
-                   "h-[38px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+                   "h-[38px] text-white min-w-fit px-2 flex justify-start items-center border border-transparent rounded-lg hover:bg-gray-200",
                    item.label === homeCategory &&
                      "underline underline-offset-8"
                  )}

@@ -77,17 +77,24 @@ const Header = ({children}) => {
             <Logo total={isScrolled}/>
             </div>
             
-            <section className='flex items-center'>
-              <article className='hidden lg:block'>
-              <Menu total={isScrolled} />
-              </article>
-
-              <HeaderDrawer>
-              <article className='lg:hidden sm:pr-10'>
-              <GiHamburgerMenu className={cn("text-white", isScrolled&&"text-black")} size={30} />
-              </article>
-              </HeaderDrawer>
-            </section>
+             <section className='flex items-center'>
+                       <HeaderDrawer>
+                        <article className='lg:hidden sm:pr-10'>
+                       <GiHamburgerMenu className={"text-black"} size={30} />
+                         </article>
+                         </HeaderDrawer>
+            
+                     {/* <article className='hidden lg:block'> */}
+                     <article>
+                      <Menu total={true} />
+                      </article>
+                 
+                       {/* <HeaderDrawer>
+                        <article className='lg:hidden sm:pr-10'>
+                       <GiHamburgerMenu className={"text-black"} size={30} />
+                         </article>
+                         </HeaderDrawer> */}
+                        </section>
       </div>    
       <hr className="h-0.5 border-t-0 hidden lg:block bg-neutral-100 opacity-100 dark:opacity-50"/>
         <div className='mt-1' />
