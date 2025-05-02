@@ -17,10 +17,12 @@ const FabButton = () => {
       {/* <div className="gap-3"> */}
         {openSubMenu && (
           <ul>
-           <button className="bg-[#292e3b] flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" 
-           onClick="document.location.href='tel:010-9936-1642'">
+           <a href="tel:010-9936-1642">
+           <button className="bg-[#292e3b] flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
             <CiPhone className="w-6 h-6" />
            </button>
+          </a>
+  
 
           <button className="bg-[#292e3b] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" 
           onClick={() => {push("/map")}}>
