@@ -38,7 +38,7 @@ function Navigator() {
     const onClickCategory = (item) => {
       if (homeCategory === item.label) {
         setHeaderImageSrc("");
-        setHomeCategory("");
+        setHomeCategory(item.label);
       } else {
         setHeaderImageSrc(item.src);
         setHomeCategory(item.label);

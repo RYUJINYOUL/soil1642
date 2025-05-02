@@ -1,23 +1,21 @@
 "use client"
 import React, { useRef } from "react"
-import Link from "next/link"
+// import Link from "next/link"
 import { useState, useEffect } from 'react'
 import useUIState from "@/hooks/useUIState";
 import { cn } from "@/lib/utils"
 import { useRouter } from 'next/navigation'
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+// import {
+//   NavigationMenu,
+//   NavigationMenuItem,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+// } from "@/components/ui/navigation-menu"
 
 
 export default function Menu(props) {
   const { push } = useRouter();
-  const headRef = useRef();
   const { homeCategory, setHomeCategory, setHeaderImageSrc, headerImageSrc} = useUIState();
-  const [element, setElement] = useState(null);
   let total = props
   const homeCategoryList = [
     {
@@ -45,37 +43,28 @@ export default function Menu(props) {
  
 
   const onClickCategory = (item) => {
+    console.log(homeCategory)
+    console.log(item.label)
     if (homeCategory === item.label) {
       setHeaderImageSrc("");
-      setHomeCategory("item.label");
+      setHomeCategory(item.label);
     } else {
       setHeaderImageSrc(item.src);
       setHomeCategory(item.label);
       push(item.src, {scroll: false})
-      // slideRight(item.src)
     }
   };
 
   useEffect(() => {
-    // var slider = document.getElementById('nav');
     slideRight()
-  
 }, []);
 
-// if (!element) {
-//   return <></>;
-// }
-
-console.log(homeCategory)
 
 
-const slideRight = (item) => {
-  // console.log(headerImageSrc)
-  // console.log(item)
+
+
+const slideRight = () => {
   var slider = document.getElementById('nav');
-  // console.log(slider.scrollWidth)
-  // console.log(slider.scrollHeight)
-  // console.log(slider.clientWidth)
   if (headerImageSrc === "/si") {
     slider.scroll(100, 200)
   }
@@ -85,7 +74,7 @@ const slideRight = (item) => {
 };
   
   return (
-    <nav id="nav" className="md:m-0 m-5 w-full flex gap-4 overflow-x-auto md:pr-0 pr-4">
+    <nav id="nav" className="md:m-0 ml-5 w-full flex gap-4 overflow-x-auto md:pr-0 pr-4">
     {homeCategoryList.map((item, i) => {
       return (
         <div
@@ -99,10 +88,7 @@ const slideRight = (item) => {
               "underline underline-offset-8"
           )}
         >
-          {/* <div onClick={() => {push(item.src, {scroll: false}), slideRight()}}> */}
-          {/* <div onClick={() => {push(item.src).then(() => slideRight())}}> */}
             {item.label}
-            {/* </div> */}
         </div>
       );
     })}
