@@ -43,8 +43,6 @@ export default function Menu(props) {
  
 
   const onClickCategory = (item) => {
-    console.log(homeCategory)
-    console.log(item.label)
     if (homeCategory === item.label) {
       setHeaderImageSrc("");
       setHomeCategory(item.label);
