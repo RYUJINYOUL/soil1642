@@ -62,11 +62,19 @@ const Header2 = ({children}) => {
    <div className='flex flex-col'>
    <div className='md:absolute sm:absolute lg:relative lg:w-[1100px] w-full top-0 left-0 lg:h-[100px] sm:h-[80px] z-10 flex flex-row items-center lg:justify-between sm:justify-between'>
     
-     <div className='w-[300px]'>
+     {/* <div className='w-[300px]'>
        <Logo total={true}/>
-       </div>
+       </div> */}
+
+       
 
       <section className='flex items-center'>
+           <HeaderDrawer>
+            <article className='lg:hidden sm:pr-10'>
+           <GiHamburgerMenu className={"text-black"} size={30} />
+             </article>
+             </HeaderDrawer>
+
          {/* <article className='hidden lg:block'> */}
          <article>
           <Menu total={true} />

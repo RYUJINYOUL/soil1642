@@ -1,9 +1,10 @@
 import React from 'react'
+import ScrollableTabsButtonForce from '@/components/tab'
 
 const page = () => {
   return (
     <div>
-      blog
+      <ScrollableTabsButtonForce />
     </div>
     
   )

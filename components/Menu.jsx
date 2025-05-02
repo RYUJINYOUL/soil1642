@@ -1,5 +1,5 @@
 "use client"
-import * as React from "react"
+import React, { useRef } from "react"
 import Link from "next/link"
 import { useState, useEffect } from 'react'
 import useUIState from "@/hooks/useUIState";
@@ -13,10 +13,11 @@ import {
 } from "@/components/ui/navigation-menu"
 
 
-export default function Menu(props:any) {
+export default function Menu(props) {
   const { push } = useRouter();
-  const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
-  const [element, setElement] = useState<HTMLCollection | null>(null);
+  const headRef = useRef();
+  const { homeCategory, setHomeCategory, setHeaderImageSrc, headerImageSrc} = useUIState();
+  const [element, setElement] = useState(null);
   let total = props
   const homeCategoryList = [
     {
@@ -43,27 +44,70 @@ export default function Menu(props:any) {
 
  
 
-  const onClickCategory = (item:any) => {
+  const onClickCategory = (item) => {
     if (homeCategory === item.label) {
       setHeaderImageSrc("");
-      setHomeCategory("");
+      setHomeCategory("item.label");
     } else {
       setHeaderImageSrc(item.src);
       setHomeCategory(item.label);
+      push(item.src, {scroll: false})
+      // slideRight(item.src)
     }
   };
 
   useEffect(() => {
-    setElement(document.getElementsByTagName('nav'));
+    // var slider = document.getElementById('nav');
+    slideRight()
+  
 }, []);
 
-if (!element) {
-  return <></>;
-}
+// if (!element) {
+//   return <></>;
+// }
 
 console.log(homeCategory)
+
+
+const slideRight = (item) => {
+  // console.log(headerImageSrc)
+  // console.log(item)
+  var slider = document.getElementById('nav');
+  // console.log(slider.scrollWidth)
+  // console.log(slider.scrollHeight)
+  // console.log(slider.clientWidth)
+  if (headerImageSrc === "/si") {
+    slider.scroll(100, 200)
+  }
+  if (headerImageSrc === "/map") {
+    slider.scroll(100, 200)
+  }
+};
   
   return (
+    <nav id="nav" className="m-5 w-full flex gap-4 overflow-x-auto pr-4">
+    {homeCategoryList.map((item, i) => {
+      return (
+        <div
+          onClick={() => onClickCategory(item)}
+          key={item.label}
+          id={i}
+          className={cn(
+            "h-[38px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+            total.total&&"text-black",
+            item.label === homeCategory &&
+              "underline underline-offset-8"
+          )}
+        >
+          {/* <div onClick={() => {push(item.src, {scroll: false}), slideRight()}}> */}
+          {/* <div onClick={() => {push(item.src).then(() => slideRight())}}> */}
+            {item.label}
+            {/* </div> */}
+        </div>
+      );
+    })}
+  </nav>
+
 
     // <NavigationMenu>
     //   <NavigationMenuList>
@@ -91,7 +135,7 @@ console.log(homeCategory)
 
     // <NavigationMenu>
     //   <NavigationMenuList>
-    //     <NavigationMenuItem>
+    //     <NavigationMenuItem className="m-5 w-full flex overflow-x-auto">
     //     {homeCategoryList.map((item, i) => {
     //     return (
     //       <NavigationMenuTrigger key={i} 
@@ -108,25 +152,6 @@ console.log(homeCategory)
     //     </NavigationMenuItem>
     //   </NavigationMenuList>
     // </NavigationMenu>
-
-
- <div className="m-5 flex gap-4 overflow-x-auto pb-6 scrollbar-hide">
-      {homeCategoryList.map((item) => {
-        return (
-          <div
-            onClick={() => onClickCategory(item)}
-            key={item.label}
-            className={cn(
-              "h-[38px] text-white min-w-fit px-3 flex justify-center items-center border border-transparent rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer", total.total&&"text-black",
-              item.label === homeCategory &&
-                "bg-white text-black hover:bg-white"
-            )}
-          >
-            <div onClick={() => {push(item.src, {scroll: false}), {scroll: false}}}>{item.label}</div>
-          </div>
-        );
-      })}
-    </div>
   )
 }
 

@@ -1,41 +1,52 @@
 "use client"
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import React, { useMemo } from 'react'
 import { FaHeart } from "react-icons/fa";
+import useUIState from "@/hooks/useUIState";
+import { cn } from "@/lib/utils"
 import { AiTwotoneNotification } from "react-icons/ai";
 import { BsChatText } from "react-icons/bs";
 
 function Navigator() {
+    const { push } = useRouter();
     const pathname = usePathname()
-    const routes = useMemo(()=>{
-        return [
-            { 
-                icon: "", 
-                label: "소개", 
-                isActive: pathname === "/so", 
-                href: "/so" 
-            },
-            { 
-                icon: "", 
-                label: "대표 상품 소개", 
-                isActive: pathname === "/dae", 
-                href: "/dae" 
-            },
-            { 
-                icon: "", 
-                label: "내부시설", 
-                isActive: pathname === "/si", 
-                href: "/si" 
-            },
-            { 
-                icon: "", 
-                label: "오시는 길", 
-                isActive: pathname === "/map", 
-                href: "/map" 
-            }
-        ]
-    },[pathname])
+    const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
+    const homeCategoryList = [
+      {
+        label: "홈",
+        src: "/",
+      },
+      {
+        label: "소개",
+        src: "/so",
+      },
+      {
+        label: "대표 상품 소개",
+        src: "/dae",
+      },
+      {
+        label: "내부시설",
+        src: "/si",
+      },
+      {
+        label: "오시는 길",
+        src: "/map",
+      },
+    ];
+    const onClickCategory = (item) => {
+      if (homeCategory === item.label) {
+        setHeaderImageSrc("");
+        setHomeCategory("");
+      } else {
+        setHeaderImageSrc(item.src);
+        setHomeCategory(item.label);
+        console.log(item.label)
+      }
+    };
+  
+
   return (
     <div>
       <section className='flex flex-row pl-7 pt-4 pb-4 gap-5'>
@@ -44,16 +55,21 @@ function Navigator() {
         <div className='text-[14px] text-[#9d9d9c] items-center hover:text-[#f9f9f8]'>회원가입</div>
       </section>
       <section className='flex flex-col gap-2 p-4'>
-        {routes.map((route) => {
-            return (
-            <Link key={route.label} href={route.href}>
-            <div className='text-[14px] text-[#feeabb] items-center p-3 hover:text-[#f9f9f8]'>{route.label}</div>
-            <section className='px-3'>
-                <div className='w-full h-[0.05px] bg-[#fcf0d6]'></div>
-            </section>
-            </Link>
-            );
-        })}
+        {homeCategoryList.map((item) => {
+             return (
+               <div
+                 onClick={() => onClickCategory(item)}
+                 key={item.label}
+                 className={cn(
+                   "h-[38px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+                   item.label === homeCategory &&
+                     "underline underline-offset-8"
+                 )}
+               >
+                 <div onClick={() => {push(item.src, {scroll: false})}}>{item.label}</div>
+               </div>
+             );
+           })}
       </section>
       <div className='flex flex-row justify-between pl-2 pr-8'>
       <div className='flex flex-col justify-center items-center pl-7 pt-4'>
