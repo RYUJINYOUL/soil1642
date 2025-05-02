@@ -85,7 +85,7 @@ const slideRight = (item) => {
 };
   
   return (
-    <nav id="nav" className="m-5 w-full flex gap-4 overflow-x-auto pr-4">
+    <nav id="nav" className="md:m-0 m-5 w-full flex gap-4 overflow-x-auto md:pr-0 pr-4">
     {homeCategoryList.map((item, i) => {
       return (
         <div
