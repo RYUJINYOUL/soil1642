@@ -3,15 +3,28 @@ import { useState } from "react";
 import { CiPhone } from "react-icons/ci";
 import { LuMapPin } from "react-icons/lu";
 import { useRouter } from 'next/navigation'
-
+import useUIState from "@/hooks/useUIState";
 
 const FabButton = () => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
   const { push } = useRouter()
+  const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
   const shownSubMenuHandler = () => {
     setOpenSubMenu((prev) => !prev);
   };
  
+  const onClickCategory = (item ,src) => {
+    if (homeCategory === item) {
+      setHeaderImageSrc("");
+      setHomeCategory(item);
+    } else {
+      setHeaderImageSrc(src);
+      setHomeCategory(item);
+      push(src)
+    }
+  };
+
+
   return (
     <div className="fixed right-5 bottom-5 pb-4 flex flex-col gap-4">
       {/* <div className="gap-3"> */}
@@ -25,7 +38,7 @@ const FabButton = () => {
   
 
           <button className="bg-[#292e3b] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" 
-          onClick={() => {push("/map")}}>
+          onClick={() => {onClickCategory("오시는 길" ,"/map")}}>
             <LuMapPin className="w-6 h-6" />
            </button>
              {/* <a href="mailto:contat@exaple.com"

@@ -6,11 +6,13 @@ import { useRouter } from 'next/navigation'
 import Gallery2 from '@/components/Gallery2'
 import Footer from '@/components/Footer'
 import Mapping from '@/components/Mapping';
+import useUIState from "@/hooks/useUIState";
 
 
 
 const Page = () => {
   const { push } = useRouter();
+   const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
   let slides : string[] = [
     '/Image/mosa0Dia0d.jpeg'
      ,
@@ -34,6 +36,18 @@ const Page = () => {
    ]
 
 
+   const onClickCategory = (item:any ,src:any) => {
+    if (homeCategory === item) {
+      setHeaderImageSrc("");
+      setHomeCategory(item);
+    } else {
+      setHeaderImageSrc(src);
+      setHomeCategory(item);
+      push(src)
+    }
+  };
+
+
   return (
     
     <div>
@@ -53,7 +67,7 @@ const Page = () => {
           <hr className="mt-1 h-0.5 md:block hidden border-t-0 bg-neutral-700 opacity-100 w-[40px] dark:opacity-50"/>
        </div>
           <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {onClickCategory("소개" ,"/so")}}>더보기 &nbsp;&gt;</div>
           <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1060px]"/>
        </div>
        </div>
@@ -83,7 +97,7 @@ const Page = () => {
           <div className='md:hidden block flex flex-col h-[40px] justify-end'>
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
           <div className='md:mt-10 mt-3' />
-          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/so")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end text-center text-[14px]' onClick={() => {onClickCategory("소개" ,"/so")}}>더보기 &nbsp;&gt;</div>
        </div>
         </div>  
         </div>
@@ -105,7 +119,7 @@ const Page = () => {
           <hr className="mt-1 h-0.5  border-t-0 md:bg-neutral-700 bg-white opacity-100 w-[120px] dark:opacity-50"/>
        </div>
        <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/dae")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {onClickCategory("대표 상품 소개" ,"/dae")}}>더보기 &nbsp;&gt;</div>
           <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[980px]"/>
        </div>
        </div>
@@ -161,7 +175,7 @@ const Page = () => {
           <div className='md:hidden block flex flex-col h-[40px] justify-end'>
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
           <div className='md:mt-10 mt-3' />
-          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/dae")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end text-center text-[14px]' onClick={() => {onClickCategory("대표 상품 소개" ,"/dae")}}>더보기 &nbsp;&gt;</div>
           </div>
         </div>  
        </section>
@@ -184,7 +198,7 @@ const Page = () => {
           <hr className="mt-1 h-0.5 md:bg-neutral-700 bg-white border-t-0 bg-neutral-700 opacity-100 w-[70px] dark:opacity-50"/>
        </div>
        <div className='flex flex-col md:h-[40px] h-[20px] justify-end'>
-          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {push("/si")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end md:block hidden text-center text-[14px]' onClick={() => {onClickCategory("내부시설" ,"/si")}}>더보기 &nbsp;&gt;</div>
           <hr className="mt-1 h-0.5 hidden md:block border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-[1030px]"/>
        </div>
        </div>
@@ -256,7 +270,7 @@ const Page = () => {
           <div className='md:hidden block flex flex-col h-[40px] justify-end'>
           <hr className="mt-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 w-full"/>
           <div className='md:mt-10 mt-3' />
-          <div className='lg:text-end text-center text-[14px]' onClick={() => {push("/si")}}>더보기 &nbsp;&gt;</div>
+          <div className='lg:text-end text-center text-[14px]' onClick={() => {onClickCategory("내부시설" ,"/si")}}>더보기 &nbsp;&gt;</div>
        </div>
        </div>
         </section>
