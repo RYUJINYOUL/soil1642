@@ -8,7 +8,7 @@ function page (){
       <section className='flex flex-col justify-center items-center'>
       <div className='lg:mt-13' />
         <div className='flex flex-col'>
-          <div className='lg:text-start text-center text-[20px] lg:w-[1100px] w-screen'>내부시설</div>
+          <div className='lg:text-start font-bold text-center text-[20px] lg:w-[1100px] w-screen'>내부시설</div>
           <hr className="my-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50"/>
         </div>
         <div className='mt-5' />
