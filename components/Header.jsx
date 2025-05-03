@@ -20,10 +20,10 @@ import Gallery from '@/components/Gallery3'
 const HeaderDrawer = ({ children }) => {
   return (<Drawer direction='left'>
   <DrawerTrigger>{children}</DrawerTrigger>
-  <DrawerContent className='w-[350px] h-full'>
-  <nav className='w-[350px] h-full border-r-[1px] border-neutral-600 '>
+  <DrawerContent className='w-[250px] h-full'>
+  <nav className='w-[250px] h-full border-r-[1px] border-neutral-600 '>
         <div className='p-[24px]'><Logo total={true}/></div>
-        <div className='bg-[#403A36] h-full'><Navigator /></div>
+        <div className='bg-black h-full'><Navigator /></div>
       </nav>
   </DrawerContent>
 </Drawer>
@@ -89,7 +89,7 @@ const Header = ({children}) => {
               </HeaderDrawer>
             </section>
       </div>    
-      <hr className="h-0.5 border-t-0 hidden lg:block bg-neutral-100 opacity-100 dark:opacity-50"/>
+      {/* <hr className="h-0.5 border-t-0 hidden lg:block bg-neutral-700 opacity-100 dark:opacity-50"/> */}
         <div className='mt-1' />
             </div>
             </PagePadding>

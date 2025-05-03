@@ -24,12 +24,12 @@ const Gallery2 = ({ images }: GalleryProps) => {
   const mainImage = useMemo(
     () =>
       images.map((image, index) => (
-        <CarouselItem key={index} className="relative aspect-video w-full h-[353px]">
+        <CarouselItem key={index} className="relative aspect-video w-full h-[353px] rounded-md">
           <Image
             src={image}
             alt={`Carousel Main Image ${index + 1}`}
             fill
-            className='object-cover ml-4'
+            className='object-cover ml-4 rounded-md'
           />
         </CarouselItem>
       )),

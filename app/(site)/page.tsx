@@ -64,7 +64,7 @@ const Page = () => {
         <div className='relative md:w-[530px] w-full h-[353px]'>
        <Image
           alt="mediaItem"
-          className="object-cover"
+          className="object-cover rounded-md"
           // width={530}
           // height={353}
           fill
@@ -114,15 +114,15 @@ const Page = () => {
        
        <div className='md:mt-7' />
 
-       <div className='md:hidden w-full px-3 justify-start items-start'>
+       <div className='md:hidden w-full px-3 justify-start items-start rounded-md'>
        <Gallery2 images={slides} />
        </div>
 
-      <div className='md:w-[1100px] w-full md:px-0 px-3 flex md:flex-row flex-col justify-start items-start gap-7'>
+      <div className='md:w-[1100px] w-full md:px-0 px-3 flex md:flex-row flex-col justify-start items-start gap-7 rounded-md'>
 
        <Image
           alt="mediaItem"
-          className="w-[350px] h-[350px] hidden md:block"
+          className="w-[350px] h-[350px] hidden md:block rounded-md"
           width={350}
           height={350}
           src={"/Image/mosa0Dia0d.jpeg"}
@@ -131,7 +131,7 @@ const Page = () => {
 
         <Image
           alt="mediaItem"
-          className="w-[350px] h-[350px] hidden md:block"
+          className="w-[350px] h-[350px] hidden md:block rounded-md"
           width={350}
           height={350}
           src={"/Image/mosajs9fUJ.jpeg"}
@@ -139,7 +139,7 @@ const Page = () => {
 
         <Image
           alt="mediaItem"
-          className="w-[350px] h-[350px] hidden md:block"
+          className="w-[350px] h-[350px] hidden md:block rounded-md"
           width={350}
           height={350}
           src={"/Image/mosaiMoiDM.jpeg"}

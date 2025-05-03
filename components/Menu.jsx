@@ -80,7 +80,7 @@ const slideRight = () => {
           key={item.label}
           id={i}
           className={cn(
-            "h-[38px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+            "h-[38px] md:text-[17px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
             total.total&&"text-black",
             item.label === homeCategory &&
               "underline underline-offset-8"

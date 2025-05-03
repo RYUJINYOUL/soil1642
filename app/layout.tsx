@@ -9,7 +9,7 @@ import FabButton from '@/components/ui/FabButton';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "흙 | 흙광고기획",
+  title: "흙광고기획",
   // description: "세종특별자치시 조치원",
   icons: {
 		icon: "/Image/logo.jpg",

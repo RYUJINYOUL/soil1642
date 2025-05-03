@@ -31,7 +31,7 @@ export default function Map() {
                streetViewControl:false,
                fullscreenControl:false,
                gestureHandling:'cooperative',
-               mapId: "MY_NEXTJS_MAPID"
+               mapId: "MY_NEXTJS_MAPID",
            }
 
 
@@ -47,6 +47,6 @@ export default function Map() {
     }, [])
 
     return (
-       <div style={{ height: '100%'}} ref={mapRef} />
+       <div className="rounded-md" style={{ height: '100%'}} ref={mapRef} />
     )
 }

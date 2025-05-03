@@ -72,7 +72,7 @@ function Navigator() {
            })}
       </section>
       <div className='flex flex-row justify-between pl-2 pr-8'>
-      <div className='flex flex-col justify-center items-center pl-7 pt-4'>
+      {/* <div className='flex flex-col justify-center items-center pl-7 pt-4'>
         <div style={{color:'#9d9d9c'}}><BsChatText className='size-[30px]'/></div>
         <div className='text-[14px] text-[#9d9d9c] hover:text-[#f9f9f8] mt-2'>온라인상담</div>
         </div>
@@ -86,7 +86,7 @@ function Navigator() {
         <div className='flex flex-col justify-center items-center pl-7 pt-4'>
         <div style={{color:'#fc5d5d'}}><FaHeart className='size-[30px]'/></div>
         <div className='text-[14px] text-[#9d9d9c] hover:text-[#f9f9f8] mt-2'>해피기부</div>
-      </div>
+      </div> */}
     </div>
     </div>
   )

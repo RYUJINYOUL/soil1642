@@ -20,10 +20,10 @@ import { cn } from "@/lib/utils";
 const HeaderDrawer = ({ children }) => {
   return (<Drawer direction='left'>
   <DrawerTrigger>{children}</DrawerTrigger>
-  <DrawerContent className='w-[350px] h-full'>
-  <nav className='w-[350px] h-full border-r-[1px] border-neutral-600 '>
+  <DrawerContent className='w-[250px] h-full'>
+  <nav className='w-[250px] h-full border-r-[1px] border-neutral-600 '>
         <div className='p-[24px]'><Logo total={true}/></div>
-        <div className='bg-[#403A36] h-full'><Navigator /></div>
+        <div className='bg-black h-full'><Navigator /></div>
       </nav>
   </DrawerContent>
 </Drawer>
@@ -70,7 +70,7 @@ const Header2 = ({children}) => {
 
       <section className='flex items-center'>
            <HeaderDrawer>
-            <article className='lg:hidden sm:pr-10'>
+            <article className='lg:hidden ml-2 sm:pr-10'>
            <GiHamburgerMenu className={"text-black"} size={30} />
              </article>
              </HeaderDrawer>
