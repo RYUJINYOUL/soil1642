@@ -192,7 +192,7 @@ const Page = () => {
       
        <div className='md:mt-7' />
     
-       <div className='md:hidden w-full px-3 justify-start items-start'>
+       <div className='md:hidden w-full py-1 px-3 justify-start items-start'>
        <Gallery2 images={slides2} />
        </div>
         
