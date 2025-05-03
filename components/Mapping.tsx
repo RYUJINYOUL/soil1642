@@ -11,7 +11,7 @@ const Mapping = () => {
     <section className='flex flex-col justify-center items-center'>
     <div className='lg:mt-13' />
       <div className='flex flex-col'>
-        <div className='lg:text-start font-bold text-center text-[20px] lg:w-[1100px] w-screen'>오시는 길</div>
+        <div className='lg:text-start font-semibold text-center text-[20px] lg:w-[1100px] w-screen'>오시는 길</div>
         <hr className="my-1 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50"/>
       </div>
       </section>
@@ -56,7 +56,7 @@ const Mapping = () => {
         <div className='flex flex-row gap-30'>
           <div className='flex flex-row gap-1.5 lg:text-start text-center text-[15px]'>
           <HiMiniMapPin className='text-[20px] text-gray-400'/>
-          <div className='font-bold'>오시는길</div>
+          <div className=''>오시는길</div>
           </div>
           <div className='lg:text-start text-center text-[15px]'>주차정보&nbsp; | &nbsp;삼화 주차장 등 주변 모든 주차장에 주차 가능</div>
         </div>  
@@ -73,7 +73,7 @@ const Mapping = () => {
         <div className='flex flex-row gap-30'>
           <div className='flex flex-row gap-1.5 lg:text-start text-center text-[15px]'>
           <HiPhone className='text-[20px] text-gray-400'/>
-          <div className='font-bold'>전화번호</div>
+          <div className=''>전화번호</div>
           </div>
           <div className='lg:text-start text-center text-[15px]'>
           010-9936-1642</div>
