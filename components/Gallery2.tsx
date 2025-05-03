@@ -86,7 +86,7 @@ const Gallery2 = ({ images }: GalleryProps) => {
           </div>
         </div>
       </div>
-      <CarouselContent className="w-full">{mainImage}</CarouselContent>
+      <CarouselContent className="w-full rounded-md">{mainImage}</CarouselContent>
     </Carousel>
   </div>
     // <div className="w-full sm:w-auto">

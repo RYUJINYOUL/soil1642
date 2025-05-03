@@ -23,7 +23,7 @@ function Logo(props) {
         </div> */}
         <div className='cursor-pointer flex flex-row items-center' onClick={onClickLogo} >
             <Image className='rounded-4xl mr-3 lg:w-[60px] lg:h-[60px] w-[40px] h-[40px]' alt='logo' width={60} height={60} src={"/Image/logo.jpg"} />
-            <div className={cn('md:text-[22px] text-[18px] text-white cursor-pointer', total.total&&"text-black")} onClick={onClickLogo}>흙광고기획</div>
+            <div className={cn('font-bold md:text-[22px] text-[18px] text-white cursor-pointer', total.total&&"text-black")} onClick={onClickLogo}>흙광고기획</div>
         </div>
        
     </section>
