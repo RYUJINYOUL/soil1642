@@ -1,10 +1,11 @@
 import React from 'react'
-import ScrollableTabsButtonForce from '@/components/tab'
+import Question from '@/components/Question'
+
 
 const page = () => {
   return (
     <div>
-      <ScrollableTabsButtonForce />
+      <Question />
     </div>
     
   )

@@ -49,11 +49,11 @@ function Navigator() {
 
   return (
     <div>
-      <section className='flex flex-row pl-7 pt-4 pb-4 gap-5'>
+      {/* <section className='flex flex-row pl-7 pt-4 pb-4 gap-5'>
         <div className='text-[14px] text-[#9d9d9c] items-center hover:text-[#f9f9f8]'>로그인</div>
         <div className='text-[14px] text-[#9d9d9c] items-center'>|</div>
         <div className='text-[14px] text-[#9d9d9c] items-center hover:text-[#f9f9f8]'>회원가입</div>
-      </section>
+      </section> */}
       <section className='flex flex-col gap-2 p-4'>
         {homeCategoryList.map((item) => {
              return (

@@ -131,5 +131,52 @@ body{
    display: none;
 }
 
+.table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+.table_type2.type_background {
+  margin-top: 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.table_type2 {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: -.8px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.inner {
+  position: relative;
+}
+
+.icon_required {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0);
+}
 
 

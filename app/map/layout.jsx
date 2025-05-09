@@ -1,6 +1,6 @@
 import React from 'react'
 import Header2 from '@/components/Header2'
-import Script from 'next/script';
+
 
 const layout = ({ children }) => {
 
