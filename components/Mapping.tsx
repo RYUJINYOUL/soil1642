@@ -33,7 +33,7 @@ const Mapping = () => {
         <div className='flex flex-col'>
           <div className='lg:text-start text-center text-[15px]'>흙광고기획</div>
           <div className='mt-1' />
-          <div className='lg:text-start text-center text-[26px]'>안산시 단원구 선부로 102-1</div>
+          <div className='lg:text-start text-center text-[26px]'>안산시 단원구 화정천서로 523</div>
           <div className='mt-8' />
         </div>
         <div className='flex flex-row gap-2'>
@@ -102,7 +102,7 @@ const Mapping = () => {
       <div className='md:mt-10 mt-5' />
       <div className='md:text-[20px] font-bold text-[18px] text-start'>흙광고기획</div>
         <div className='mt-1' />
-        <div className='text-[15px] truncate text-start'>안산시 단원구 선부로 102-1</div>
+        <div className='text-[15px] truncate text-start'>안산시 단원구 화정천서로 523</div>
         <div className='mt-5' />
         <div className='md:text-[20px] font-bold text-[18px] text-start'>전화번호</div>
         <div className='mt-1' />
